@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 10vh auto;
+  padding: 0 120px;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+.container .wrapper {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "card-1 card-1 card-2 card-5" "card-3 card-4 card-4 card-5";
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.container .wrapper .card {
+  background-color: #7541c8;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.46);
+          box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.46);
+}
+
+.container .wrapper .card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.container .wrapper .card .profile .profile-pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px white solid;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.container .wrapper .card .profile .name {
+  font-size: 0.8rem;
+}
+
+.container .wrapper .card .profile .name p {
+  color: white;
+  opacity: 0.7;
+}
+
+.container .wrapper .card .heading {
+  margin-bottom: 10px;
+  font-size: 0.6rem;
+  z-index: 1000;
+}
+
+.container .wrapper .card .testimonial p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.container .wrapper #card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: card-1;
+  position: relative;
+}
+
+.container .wrapper #card-1 .heading {
+  position: relative;
+}
+
+.container .wrapper #card-1 .heading :before {
+  content: url(bg-pattern-quotation.svg);
+  position: absolute;
+  top: -78px;
+  right: 78px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.container .wrapper #card-2 {
+  background-color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: card-2;
+}
+
+.container .wrapper #card-3 {
+  background-color: white;
+  color: #48556a;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card-3;
+}
+
+.container .wrapper #card-3 .profile .name p {
+  color: #19212e;
+}
+
+.container .wrapper #card-4 {
+  background-color: #19212e;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: card-4;
+}
+
+.container .wrapper #card-5 {
+  background-color: white;
+  color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: card-5;
+}
+
+.container .wrapper #card-5 .profile .name p {
+  color: #19212e;
+}
+
+.attribution {
+  font-size: 18px;
+  text-align: center;
+  margin: -35px 0 30px 0;
+}
+
+.attribution a {
+  color: #7541c8;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
