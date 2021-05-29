@@ -120,6 +120,10 @@ body{
                     right: 78px;
                     overflow: hidden;
                     z-index: -1;
+                    
+                    @include mobile{
+                        right: 0;
+                    }
                 }
             }
         }
